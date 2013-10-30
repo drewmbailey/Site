@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "dbailey@zoll.com";
-$EmailTo = "CHANGE-THIS@YOUR-DOMAIN.com";
+$EmailTo = "dbailey@zoll.com";
 $Subject = "ZOLL Foundation Application";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Position = Trim(stripslashes($_POST['Position']));

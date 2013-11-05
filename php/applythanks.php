@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
 
 <head>
-	<title>A Nice & Simple Contact Form</title>
+	<title>ZOLL Foundation Application Form</title>
 	
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>

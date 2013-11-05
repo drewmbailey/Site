@@ -101,9 +101,8 @@ textarea {
 
 @font-face
 {
-font-family: futuraBold;
-src: url('../fonts/FuturaStd-Bold.otf'),
-     url(''); /* IE9 */
+font-family: "futuraBold";
+src: url('../fonts/FuturaStd-Bold.otf');
 }
 
 @font-face
@@ -420,7 +419,7 @@ footer a:hover{
     color: #fff;
     font-weight: 700;
     font-size: 22px;
-    font-family: futuraBold;
+    font-family: "futuraBold", arial, Sans-Serif;
     letter-spacing: 1px;
     text-transform: uppercase;
     background-image: url("../img/button.png");
@@ -434,30 +433,26 @@ footer a:hover{
     background-image: url("../img/buttonOn.png");
 }
 
-#applicationForm{
+#applicationForm, #reportForm{
     display:none;
     width: 800px;
     margin-top: 15px;
+    margin-left: 30px;
     height: 800px;
     padding: 0 10px;
-
 }
 
-#reportsForm{
-    display:none;
-    width: 800px;
-    margin-top: 20px;
-    padding: 0 10px;
+#reportForm{
+    height: 400px;
 }
 
-
-#appllicationForm h4{
+#applicationForm h4, #reportForm h4{
     font-family: arial, sans-serif;
     font-size: 16px !important;
     margin-top: 10px;
 }
 
-#applicationForm label{
+#applicationForm label, #reportForm label{
     font-family: arial, sans-serif;
     font-size: 13px;
     clear: left;
@@ -467,7 +462,7 @@ footer a:hover{
     margin-top: 5px;
 }
 
-#applicationForm input, #applicationForm textarea {
+#applicationForm input, #applicationForm textarea, #reportForm input, #reportForm textarea {
     padding: 5px;
     width: 400px;
     font-family: arial, sans-serif;
@@ -477,7 +472,7 @@ footer a:hover{
     clear: right;
 }
 
-#applicationForm textarea{
+#applicationForm textarea, #reportForm textarea{
     padding: 5px;
     width: 600px;
     font-family: arial, sans-serif;
@@ -487,20 +482,27 @@ footer a:hover{
     clear: right;
 }
 
-#applicationForm textarea {
+#applicationForm textarea, #reportForm textarea{
     height: 90px;
 }
 
-#applicationForm textarea:focus, #applicationForm input:focus {
+#applicationForm textarea:focus, #applicationForm input:focus, #reportForm textarea:focus, #reportForm input:focus{
     border: 2px solid #900;
 }
 
-#applicationForm input.submit-button {
+#applicationForm input.submit-button, #reportForm input.submit-button{
     width: 100px;
     float: right;
-    margin: 40px 0 0 200px;
+    margin: 50px 40px 20px 160px;
 }
 
+.textAreaLabel{
+    width: 510px !important;
+}
+
+#referenceComment{
+    display: none;
+}
 
 /*=====DIRECTORS STYLES=====*/
 
@@ -508,10 +510,14 @@ footer a:hover{
     margin-bottom: 50px;
 }
 
+#directorsContentWrap #contentText h3{
+    font-size: 13px;
+    margin-bottom: -10px;
+}
 
-
-
-
+#directorsContentWrap #contentText p span{
+    font-style: italic;
+}
 
 
 

@@ -125,14 +125,15 @@ body{
     width: 996px;
     margin: 0 auto;
     background: #fff;
-    min-height: 980px;
+    min-height: 930px;
+/*    min-height: 980px;*/
     overflow: hidden;
     box-shadow: 0px -10px 50px -10px;
 }
 
 p{
     font-family: arial, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
 }
 
@@ -329,7 +330,7 @@ footer a:hover{
 
 #indexContentText p{
     font-family: arial, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
 }
 
@@ -351,7 +352,7 @@ footer a:hover{
 #indexContentSidebar p{
     color: #fff;
     font-family: arial, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 16pt;
 }
 
@@ -385,14 +386,15 @@ footer a:hover{
     margin-top: 30px;
 }
 
-#cprPic p{
+#cprPic p, #contentSidebar p{
     color: #000;
     font-family: arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 14pt;
+    margin-bottom: 10px !important;
 }
 
-#cprPic .citation{
+#cprPic .citation, #contentSidebar .citation{
     text-align: right;
 }
 
@@ -409,11 +411,6 @@ footer a:hover{
 }
 
 /*=====APPLY STYLES=====*/
-
-#applyContentWrap #contentSidebar ul{
-    list-style: none;
-    padding: 5px;
-}
 
 .button{
     color: #fff;
@@ -462,6 +459,12 @@ footer a:hover{
     margin-top: 5px;
 }
 
+#applicationForm p{
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
 #applicationForm input, #applicationForm textarea, #reportForm input, #reportForm textarea {
     padding: 5px;
     width: 400px;
@@ -500,6 +503,10 @@ footer a:hover{
     width: 510px !important;
 }
 
+.conflictTextarea{
+    height: 16px !important;
+}
+
 #referenceComment{
     display: none;
 }
@@ -511,7 +518,7 @@ footer a:hover{
 }
 
 #directorsContentWrap #contentText h3{
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: -10px;
 }
 
@@ -519,9 +526,15 @@ footer a:hover{
     font-style: italic;
 }
 
+#contentText ul{
+    font-size: 14px;
+}
 
-
-
+/*=====ERROR AND FILE NOT FOUND STYLES=====*/
+#errorContentWrap, #filenotfoundContentWrap{
+    margin: 60px auto;
+    text-align: center;
+}
 
 /* ==========================================================================
    Helper classes

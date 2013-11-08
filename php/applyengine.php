@@ -20,15 +20,8 @@ $Reference_Telephone = Trim(stripslashes($_POST['Reference_Telephone']));
 
 $Recommendation = Trim(stripslashes($_POST['Recommendation'])); 
 
-// validation
-$validationOK=true;
-if (!$validationOK) {
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
-  exit;
-}
+// email body text
 
-// prepare email body text
-$Body = "";
 $Body .= "Name: ";
 $Body .= $Name;
 $Body .= "\n";
@@ -51,7 +44,6 @@ $Body .= "Research: ";
 $Body .= $Research;
 $Body .= "\n";
 
-$Body = "";
 $Body .= "Reference_Name: ";
 $Body .= $Reference_Name;
 $Body .= "\n";
@@ -75,13 +67,11 @@ $Body .= $Recommendation;
 $Body .= "\n";
 
 // send email 
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+$success = mail($EmailTo, $Subject, $Body, "From: <$Email>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=applythanks.php\">";
+	print "<meta http-equiv=\"refresh\" content=\"0;URL=applythanks.php\">";
 }
-else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
-}
+
 ?>

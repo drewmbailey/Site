@@ -10,6 +10,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- keep browser from caching -->
+
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Expires" CONTENT="-1">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -53,25 +58,25 @@
       <div id="applyContentWrap">
         <div id="contentText">
           <h2>How to Apply</h2>
-          <p>Requests for support from the Foundation are made at the Foundation website www.ZOLLfoundation.org at any time via a simple application available on the site. Applications are reviewed periodically by the Board and the Foundation will acknowledge receipt of all applications.  Approvals by the Board of Directors are oriented toward:</p>
+          <p>Requests for support from the Foundation can be made at www.zollfoundation.org at any time via a simple application. Applications, whether an individual or an organization, must have a reference from another health care professional recommending the project, as well as the individual or organization, applying for the grant. Applicants must also discolose any conflicts of interest in accordance with their institution's or agency's policies.</p>
+          <p>Receipt of applications will be confirmed with an immediate email confirmation. Applications are reviewed periodically by the board. Approvals by the Board of Directors are oriented toward:</p>
           <ul>
             <li>early research in new therapies or techniques;</li>
-            <li>reviews of data and information to better understand  practices in the field of resuscitation and acute critical care; and</li>
-            <li>educational activities combined with  measurement to enhance care.</li>
-            <li>promising projects where initial results may allow researchers to seek additional funding from other sources for continued research that will require more extensive trials or scale. </li>
+            <li>reviews of data and information to better understand  practices in the field of resuscitation and acute critical care;</li>
+            <li>educational activities combined with  measurement to enhance care; and</li>
+            <li>promising projects whose initial results may allow researchers to seek additional funding from other sources, allowing for continued research that will require more extensive trials or scale.</li>
           </ul>
-          <p> The Foundation attempts to respond to all proposals in six months or less and will on occasion request further information or have direct discussions with grant applicants. For research Grants the applicant must have a reference from another health care professional recommending the project and the individual applying for the grant. Grant applicants must also disclose any conflicts of interest in accordance with their institutions or agencies policies in their grant application</p> 
-          <p>Approved grants and approved requests for other funding will be listed on the Foundation Website.</p>
+          <p> The Board attempts to respond to all proposals in six months or less and will on occasion request further information or have direct discussions with grant applicants.</p> 
+          <p>Approved grants will be listed on the Foundation website.</p>
           <h2>Report of Activities Associated with Grants</h2>
-          <p>Grant recipients are required to provide a report on the activity for which funding is received whether the activity is a research activity or a supported event or program that is not related to research. A simple form for these reports is available on the website.</p>
+          <p>Grant recipients are required to provide a report on the activity for which funding is received whether the activity is a research activity or a supported event or program that is not related to the research. A simple form for these reports is available on the website under "How to Apply."</p>
         </div> 
         <div id="contentSidebar">
           <h2>Grant Eligibility</h2>
           <p>Grant applicants must meet minimum criteria:</p>
           <ul>
             <li>Have a formal association with an institution or agency involved in resuscitation or acute critical care in a medical, scientific, educational or administrative capacity.</li>
-            <li>Is an agency institution or association involved in resuscitation or acute critical care? </li>
-            <li>If an individual is an applicant they must not be under any professional restrictions and have all required certifications or licenses necessary to practice their occupation.</li>
+            <li>Individual applicants must not be under any professional restrictions and must have all required certifications or licenses necessary to practice their occupation.</li>
           </ul>
           <a class="fancybox" href="#applicationForm"><button class="button" id="application">Application Form</button></a>
 
@@ -98,10 +103,15 @@
                 <label for="Telephone">Telephone:</label>
                 <input type="text" name="Telephone" id="Telephone" required />
                 
-                <label class="textAreaLabel" for="Research">Description of Research:</label><br />
-                <textarea name="Research" rows="20" cols="20" id="Research" required></textarea>
+                <label class="textAreaLabel" for="Research">Description of Research or other program for which the grant is requested:</label><br />
+                <textarea name="Research" rows="20" cols="20" id="Research" placeholder="You may attach additional documents in support of the application." required></textarea>
 
-                <h4>Recommendation and Reference From Another Health Care Professional</h4>
+                <label class="textAreaLabel" for="Conflict">Please disclose any conflict of interest in accordance to your organization's policies:</label><br />
+                <textarea name="Conflict" rows="20" cols="20" id="Conflict" class="conflictTextarea" required></textarea>
+
+                <hr>
+
+                <h4>Recommendation and Reference from Another Health Care Professional</h4>
 
                 <label for="Reference_Name">Name of Reference:</label>
                 <input type="text" name="Reference_Name" id="Reference_Name" required />
@@ -121,8 +131,21 @@
                 <label for="Reference_Telephone">Reference Telephone:</label>
                 <input type="text" name="Reference_Telephone" id="Reference_Telephone" required />
 
-                <label class="textAreaLabel" for="Recommendation">Recommendation for Support of Research and Applicant:</label><br />
-                <textarea name="Message" rows="20" cols="20" id="Message" required></textarea>
+                <label class="textAreaLabel" for="Recommendation">Recommendation for Support of the Research or Program 
+                  and Applicant:</label><br />
+                <textarea name="Message" rows="20" cols="20" id="Message" placeholder="You may attach additional documents in support of the applicant."required></textarea>
+
+                <hr>
+
+                <h4>Applicant Signature</h4>
+
+                <p>I certify I am able to practice, have current licensure and or certification and am not under any restrictions.</p>
+
+                <label for="Signature">Signature:</label>
+                <input type="text" name="Signature" id="Signature" required />
+
+                <label for="Signature">Date:</label>
+                <input type="text" name="Date" id="Date" required />
 
                 <input type="submit" name="submit" value="Submit" class="submit-button" />
               </form>
@@ -142,7 +165,7 @@
                 <label for="applicantName">Applicant:</label>
                 <input type="text" name="applicantName" id="applicantName" required />
           
-                <label class="textAreaLabel" for="reportComment">Report of research, research conclusions and outcome of program conducted with grant:</label><br />
+                <label class="textAreaLabel" for="reportComment">Report of research, research conclusions and/or outcome of program conducted with grant:</label><br />
                 <textarea name="reportComment" rows="20" cols="20" id="reportComment" placeholder="Significant findings, conclusions, dates of activities, presentations, etc." required></textarea>
 
                 <input type="submit" name="submit" value="Submit" class="submit-button" />
@@ -180,13 +203,13 @@
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    // <script>
-    //   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    //   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    //   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    //   e.src='//www.google-analytics.com/analytics.js';
-    //   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    //   ga('create','UA-XXXXX-X');ga('send','pageview');
-    // </script>
+    <!--<script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
   </body>
 </html>
